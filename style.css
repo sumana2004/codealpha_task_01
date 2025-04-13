@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #e7f2fd;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* Button Styling */
+.btn {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: 600;
+    background: white;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #4070f4, #7090f4);
+    transition: all 0.4s ease-in-out;
+    border-radius: 8px;
+}
+
+button:hover::before {
+    left: 0;
+}
+
+button:hover {
+    color: white;
+    box-shadow: 0 6px 20px rgba(64, 112, 244, 0.5);
+}
+
+button.active {
+    background: #4070f4;
+    color: white;
+    box-shadow: 0 6px 20px rgba(64, 112, 244, 0.5);
+}
+
+
+/* Image Cards Grid */
+.Img_cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    display: block;  /* Ensures proper spacing */
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+/* Hide Cards By Default */
+.card.hide {
+    display: none;
+}
